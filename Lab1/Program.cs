@@ -6,7 +6,7 @@ namespace Lab1
     {
         static void Main()
         {
-            int[][] arr =
+            int[][] array =
             {
                 new[]{1,2,3},
                 new[]{4,5,6},
@@ -14,20 +14,20 @@ namespace Lab1
                 new[]{10,11,12}
             };
 
-            Show(arr);
-            Swap(arr);
+            Show(array);
+            Swap(array);
             Console.WriteLine();
-            Show(arr);
+            Show(array);
 
             Console.ReadKey();
         }
 
-        public static void Show(int[][] arr)
+        public static void Show(int[][] array)
         {
-            foreach (var i in arr) 
+            foreach (var innerArray in array) 
             {
-                foreach (var j in i) {
-                    Console.Write($"{j,4}");
+                foreach (var item in innerArray) {
+                    Console.Write($"{item,4}");
                 }
                 Console.WriteLine();
             }
