@@ -25,24 +25,14 @@ namespace Task_2_6
         {
             if (word.Length > alphabet.Length)
                 return false;
-            var dictionaryForWord = DictionaryOfLetters(word);
-            var dictionaryForAlphabet = DictionaryOfLetters(alphabet);
+            var dictionaryForWord = DictionaryOfLetters(word.ToCharArray());
+            var dictionaryForAlphabet = DictionaryOfLetters(alphabet.Cast<char>().ToArray());
             foreach (var field in dictionaryForWord)
             {
                 if (!dictionaryForAlphabet.TryGetValue(field.Key, out var value) || value < field.Value)
                     return false;
             }
             return true;
-        }
-
-        public static Dictionary<char, int> DictionaryOfLetters(string word)
-        {
-            return DictionaryOfLetters(word.ToCharArray());
-        }
-
-        public static Dictionary<char, int> DictionaryOfLetters(char[,] array)
-        {
-            return DictionaryOfLetters(array.Cast<char>().ToArray());
         }
 
         private static Dictionary<char, int> DictionaryOfLetters(char[] array)

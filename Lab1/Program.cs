@@ -33,15 +33,15 @@ namespace Lab1
             }
         }
 
-        public static void Swap(int[][] arr)
+        public static void Swap(int[][] array)
         {
-            for (int i = 0; i < arr.Length / 2; i++) 
+            for (int i = 0; i < array.Length / 2; i++) 
             {
-                for (int j = 0; j < arr[i].Length; j++) 
+                for (int j = 0; j < array[i].Length; j++) 
                 {
-                    int temp = arr[i][j];
-                    arr[i][j] = arr[arr.Length - 1 - i][j];
-                    arr[arr.Length - 1 - i][j] = temp;
+                    int temp = array[i][j];
+                    array[i][j] = array[array.Length - 1 - i][j];
+                    array[array.Length - 1 - i][j] = temp;
                 }
             }
         }
