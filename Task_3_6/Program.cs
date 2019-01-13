@@ -7,8 +7,9 @@ namespace Task_3_6
     {
         static void Main()
         {
-            string text = "Задан текст. Определить, содержит ли он цифры?";
+            string text = "Задан текст. Определить5, содержит ли он цифры?";
 
+            Console.WriteLine("Текст: " + text);
             Console.WriteLine(IsTextContainNumber(text) ? "да" : "нет");
             Console.ReadKey();
         }

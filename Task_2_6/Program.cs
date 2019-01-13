@@ -16,9 +16,24 @@ namespace Task_2_6
                 {'г','а','п','с'}
             };
 
-            string word = "молоко";
+            string word = "крокодил";
+            Console.WriteLine("Алфавит:");
+            Show(alphabet);
+            Console.WriteLine("Слово: " + word);
             Console.WriteLine(IsWordCorrectly(word, alphabet) ? "Можно" : "Нельзя");
             Console.ReadKey();
+        }
+
+        public static void Show(char[,] array)
+        {
+            for (int i = 0; i < array.GetLength(0); i++)
+            {
+                for (int j = 0; j < array.GetLength(0); j++)
+                {
+                    Console.Write($"{array[i, j],2}");
+                }
+                Console.WriteLine();
+            }
         }
 
         public static bool IsWordCorrectly(string word, char[,] alphabet)
